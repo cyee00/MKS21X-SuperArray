@@ -24,4 +24,14 @@ public class SuperArray {
     }
     return ans+data[size-1]+"]";
   }
+  public String toStringDebug() {
+    String ans = "[";
+    for (int i=0;i<size-1;i++){
+      ans=ans+data[i]+", ";
+    }
+    for (int i=0;i<10-size-1;i++){
+      ans=ans+"null"+", ";
+    }
+    return ans+"null"+"]";
+  }
 }
