@@ -26,12 +26,18 @@ public class SuperArray {
   }
   public String toStringDebug() {
     String ans = "[";
-    for (int i=0;i<size-1;i++){
+    for (int i=0;i<size;i++){
       ans=ans+data[i]+", ";
     }
     for (int i=0;i<10-size-1;i++){
       ans=ans+"null"+", ";
     }
     return ans+"null"+"]";
+  }
+  public String get(int index) {
+    if (index>=size){
+      return null;
+    }
+    return data[index];
   }
 }
