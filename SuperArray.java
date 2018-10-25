@@ -15,6 +15,7 @@ public class SuperArray {
   }
   public boolean add(String str) {
     data[size]=str;
+    size++;
     return true;
   }
   public String toString() {
@@ -35,9 +36,17 @@ public class SuperArray {
     return ans+"null"+"]";
   }
   public String get(int index) {
-    if (index>=size){
+    if (index<0||index>=size){
       return null;
     }
     return data[index];
+  }
+  public String set(int i, String str){
+    if (index<0||index>=size) {
+      return null;
+    }
+    String ans = data[i];
+    data[i]=str;
+    return ans;
   }
 }
