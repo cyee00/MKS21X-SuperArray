@@ -3,6 +3,7 @@ public class SuperArray {
   private int size;
   public SuperArray() {
     String[] data = new String[10];
+    size=0;
   }
   public void clear() {
     size = 0;
@@ -20,6 +21,9 @@ public class SuperArray {
   }
   public String toString() {
     String ans = "[";
+    if (size==0){
+      return "[]";
+    }
     for (int i=0;i<size-1;i++){
       ans=ans+data[i]+", ";
     }

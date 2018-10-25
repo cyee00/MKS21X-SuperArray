@@ -7,7 +7,7 @@ public class Driver{
 		//Testing SuperArray initializing
 		System.out.println("\n---Initializing SuperArray---");
 		System.out.println("Testing toString(): should return []");
-		System.out.println(a);
+		System.out.println(a.toString());
 		System.out.println("\nTesting toStringDebug(): should return [null (x10)]");
 		System.out.println(a.toStringDebug());
 /*
