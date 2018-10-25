@@ -41,12 +41,12 @@ public class SuperArray {
     }
     return data[index];
   }
-  public String set(int i, String str){
+  public String set(int index, String str){
     if (index<0||index>=size) {
       return null;
     }
-    String ans = data[i];
-    data[i]=str;
+    String ans = data[index];
+    data[index]=str;
     return ans;
   }
 }
