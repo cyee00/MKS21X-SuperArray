@@ -2,10 +2,11 @@ public class SuperArray {
   private String[] data;
   private int size;
   public SuperArray() {
-    String[] data = new String[10];
+    data = new String[10];
     size=0;
   }
   public void clear() {
+    data = new String[10];
     size = 0;
   }
   public int size() {
@@ -15,9 +16,12 @@ public class SuperArray {
     return (size==0);
   }
   public boolean add(String str) {
-    data[size]=str;
-    size++;
-    return true;
+    if (size<data.length){
+      data[size]=str;
+      size++;
+      return true;
+    }
+    return false;
   }
   public String toString() {
     String ans = "[";
@@ -31,22 +35,27 @@ public class SuperArray {
   }
   public String toStringDebug() {
     String ans = "[";
-    for (int i=0;i<size;i++){
+    for (int i=0;i<size-1;i++){
       ans=ans+data[i]+", ";
     }
     for (int i=0;i<10-size-1;i++){
       ans=ans+"null"+", ";
     }
-    return ans+"null"+"]";
+    if (size<data.length){
+      return ans+"null"+"]";
+    }
+    return ans+data[size-1]+"]";
   }
   public String get(int index) {
     if (index<0||index>=size){
+      System.out.println("Error: index out of range.");
       return null;
     }
     return data[index];
   }
   public String set(int index, String str){
     if (index<0||index>=size) {
+      System.out.println("Error: index out of range.");
       return null;
     }
     String ans = data[index];

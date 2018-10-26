@@ -20,7 +20,6 @@ public class Driver{
 		System.out.println("\n\n---Testing add()---");
 		System.out.println("Testing add() while empty: should return true");
 		System.out.println(a.add("apple"));
-    /*
 		System.out.println("\nChecking add() and toString(): should return [apple]");
 		System.out.println(a);
 		a.add("banana");
@@ -76,7 +75,7 @@ public class Driver{
 		System.out.println(a.set(1, "fish"));
 		System.out.println("-Should print [blue, fish, coughdrop]-");
 		System.out.println(a);
-		System.out.println("\n---Testing set(2, \"syrup\"): should return syrup---");
+		System.out.println("\n---Testing set(2, \"syrup\"): should return coughdrop---");
 		System.out.println(a.set(2, "syrup"));
 		System.out.println("-Should print [blue, fish, syrup]-");
 		System.out.println(a);
@@ -89,6 +88,5 @@ public class Driver{
 		System.out.println(a.set(2, "rock"));
 		System.out.println("-Should print []-");
 		System.out.println(a);
-    */
 	}
 }
