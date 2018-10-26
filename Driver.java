@@ -88,17 +88,47 @@ public class Driver{
 		System.out.println(a.set(2, "rock"));
 		System.out.println("-Should print []-");
 		System.out.println(a);
-
+/*
     //testing resize()
     SuperArray b = new SuperArray();
     System.out.println(b.toStringDebug());
     System.out.println(b.add("one"));
     System.out.println(b.add("two"));
-    System.out.println(b.size());
+    System.out.println(b.add("one"));
+    System.out.println(b.add("two"));
+    System.out.println(b.add("one"));
+    System.out.println(b.add("two"));
+    System.out.println(b.add("one"));
+    System.out.println(b.add("two"));
+    System.out.println(b.add("one"));
+    System.out.println(b.add("two"));
+    System.out.println(b.add("one"));
     System.out.println("\n\n-----Testing resize()-----");
     System.out.println(b.toString());
     System.out.println("\n---Testing resize(): should return [one,two,null x18]");
     b.resize();
     System.out.println(b.toStringDebug());
+    */
+
+    //testing contains()
+    SuperArray b = new SuperArray();
+    System.out.println(b.toStringDebug());
+    System.out.println(b.add("one"));
+    System.out.println(b.add("two"));
+    System.out.println(b.add("one"));
+    System.out.println(b.add("two"));
+    System.out.println(b.add("one"));
+    System.out.println(b.add("two"));
+    System.out.println(b.add("one"));
+    System.out.println(b.add("two"));
+    System.out.println(b.add("one"));
+    System.out.println(b.add("two"));
+    System.out.println(b.add("one"));
+    System.out.println("\n\n-----Testing contains()-----");
+    System.out.println(b.toString());
+    System.out.println("\n---Testing contains(\"one\"): should return true");
+    System.out.println(b.contains("one"));
+    System.out.println("\n---Testing contains(\"three\"): should return false");
+    System.out.println(b.contains("three"));
 	}
 }

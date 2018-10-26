@@ -74,4 +74,12 @@ public class SuperArray {
       data[i]=newData[i];
     }
   }
+  public boolean contains(String target) {
+    for (int i=0;i<size;i++){
+      if (data[i].equals(target)){
+        return true;
+      }
+    }
+    return false;
+  }
 }
