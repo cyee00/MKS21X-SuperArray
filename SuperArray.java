@@ -1,6 +1,7 @@
 public class SuperArray {
   private String[] data;
   private String[] newData;
+  private String[] vals;
   private int size;
   public SuperArray() {
     data = new String[10];
@@ -18,6 +19,12 @@ public class SuperArray {
   }
   public boolean add(String str) {
     if (size<data.length){
+      data[size]=str;
+      size++;
+      return true;
+    }
+    if (size>=data.length){
+      resize();
       data[size]=str;
       size++;
       return true;
@@ -81,5 +88,34 @@ public class SuperArray {
       }
     }
     return false;
+  }
+  public int indexOf(String target) {
+    for (int i=0;i<size;i++){
+      if (data[i].equals(target)){
+        return i;
+      }
+    }
+    return -1;
+  }
+  public int lastIndexOf(String target) {
+    for (int i=size-1;i>=0;i--){
+      if (data[i].equals(target)){
+        return i;
+      }
+    }
+    return -1;
+  }
+  public void add(int index, String element) {
+    if (index < 0 || index > size()) {
+      System.out.println("Error: index out of range.");
+    }
+    vals = new String[data.length-index];
+    for (int i=index;i<index;i++){
+      vals[i-index]=data[i];
+    }
+    data[index]=element;
+    for (int i=index+1;i<vals.length;i++) {
+      data[i]=vals[index+1-4];
+    }
   }
 }
