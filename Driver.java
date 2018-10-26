@@ -10,7 +10,7 @@ public class Driver{
 		System.out.println(a.toString());
 		System.out.println("\nTesting toStringDebug(): should return [null (x10)]");
 		System.out.println(a.toStringDebug());
-/*
+
 		//testing size()
 		System.out.println("\n\n---Testing size()---");
 		System.out.println("Testing size(): should return 0");
@@ -20,6 +20,7 @@ public class Driver{
 		System.out.println("\n\n---Testing add()---");
 		System.out.println("Testing add() while empty: should return true");
 		System.out.println(a.add("apple"));
+    /*
 		System.out.println("\nChecking add() and toString(): should return [apple]");
 		System.out.println(a);
 		a.add("banana");
