@@ -64,7 +64,7 @@ public class SuperArray {
     data[index]=str;
     return ans;
   }
-  public void resize() {
+  private void resize() {
     newData = new String[data.length];
     for (int i=0;i<size;i++){
       newData[i]=data[i];
