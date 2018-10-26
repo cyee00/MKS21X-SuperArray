@@ -1,5 +1,6 @@
 public class SuperArray {
   private String[] data;
+  private String[] newData;
   private int size;
   public SuperArray() {
     data = new String[10];
@@ -35,16 +36,17 @@ public class SuperArray {
   }
   public String toStringDebug() {
     String ans = "[";
-    for (int i=0;i<size-1;i++){
+    for (int i=0;i<size;i++){
       ans=ans+data[i]+", ";
     }
-    for (int i=0;i<10-size-1;i++){
+    for (int i=size;i<data.length-1;i++){
       ans=ans+"null"+", ";
     }
-    if (size<data.length){
+    if (size==data.length){
+      return ans+data[size-1]+"]";
+    } else {
       return ans+"null"+"]";
     }
-    return ans+data[size-1]+"]";
   }
   public String get(int index) {
     if (index<0||index>=size){
@@ -61,5 +63,15 @@ public class SuperArray {
     String ans = data[index];
     data[index]=str;
     return ans;
+  }
+  public void resize() {
+    newData = new String[data.length];
+    for (int i=0;i<size;i++){
+      newData[i]=data[i];
+    }
+    data = new String[newData.length+10];
+    for (int i=0;i<size;i++){
+      data[i]=newData[i];
+    }
   }
 }
