@@ -125,16 +125,16 @@ public class SuperArray {
       return null;
     }
     vals = new String[data.length-index];
-    for (int i=index;i<index;i++){
+    for (int i=index;i<data.length;i++){
       vals[i-index]=data[i];
     }
     for (int i=0;i<vals.length;i++) {
       data[i+index]=vals[i];
     }
+    size--;
     return ans;
   }
   public boolean remove(String element) {
-    boolean occurs = contains(element);
     if (contains(element)) {
       int indexOf = indexOf(element);
       System.out.println(""+indexOf);

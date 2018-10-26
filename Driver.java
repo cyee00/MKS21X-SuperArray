@@ -1,7 +1,7 @@
 public class Driver{
 	public static void main(String[] args){
+    /*
 		SuperArray a = new SuperArray();
-		/*Phase 1 testing*/
 		System.out.println("-----Testing Phase 1-----");
 
 		//Testing SuperArray initializing
@@ -88,6 +88,7 @@ public class Driver{
 		System.out.println(a.set(2, "rock"));
 		System.out.println("-Should print []-");
 		System.out.println(a);
+
 /*
     //testing resize()
     SuperArray b = new SuperArray();
@@ -108,9 +109,8 @@ public class Driver{
     System.out.println("\n---Testing resize(): should return [one,two,null x18]");
     b.resize();
     System.out.println(b.toStringDebug());
-    */
 
-    //testing contains()
+    //testing contains(), indexOf(target), lastIndexOf(target)
     SuperArray b = new SuperArray();
     System.out.println(b.toStringDebug());
     System.out.println(b.add("one"));
@@ -125,10 +125,41 @@ public class Driver{
     System.out.println(b.add("two"));
     System.out.println(b.add("one"));
     System.out.println("\n\n-----Testing contains()-----");
-    System.out.println(b.toString());
+    System.out.println(b.toStringDebug());
     System.out.println("\n---Testing contains(\"one\"): should return true");
     System.out.println(b.contains("one"));
     System.out.println("\n---Testing contains(\"three\"): should return false");
     System.out.println(b.contains("three"));
+    System.out.println("\n\n-----Testing indexOf(target)-----");
+    System.out.println(b.toString());
+    System.out.println("\n---Testing contains(\"one\"): should return 0");
+    System.out.println(b.indexOf("one"));
+    System.out.println("\n---Testing contains(\"three\"): should return -1");
+    System.out.println(b.indexOf("three"));
+    System.out.println("\n\n-----Testing lastIndexOf(target)-----");
+    System.out.println(b.toString());
+    System.out.println("\n---Testing lastIndexOf(\"one\"): should return 8");
+    System.out.println(b.lastIndexOf("one"));
+    System.out.println("\n---Testing lastIndexOF(\"three\"): should return -1");
+    System.out.println(b.lastIndexOf("three"));
+    */
+    SuperArray b = new SuperArray();
+    System.out.println(b.add("one"));
+    System.out.println(b.add("two"));
+    System.out.println(b.add("three"));
+    System.out.println(b.add("four"));
+    System.out.println(b.add("five"));
+    System.out.println(b.add("six"));
+    System.out.println(b.add("seven"));
+    System.out.println(b.add("eight"));
+    System.out.println(b.add("nine"));
+    System.out.println(b.add("five"));
+    System.out.println(b);
+    System.out.println(b.indexOf("five"));
+    System.out.println(b.lastIndexOf("five"));
+    //System.out.println(b.remove(9));
+    //System.out.println(b);
+    System.out.println(b.remove("two"));
+    System.out.println(b);
 	}
 }
