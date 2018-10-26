@@ -128,15 +128,22 @@ public class SuperArray {
     for (int i=index;i<index;i++){
       vals[i-index]=data[i];
     }
-    for (int i=index;i<vals.length;i++) {
-      data[i]=vals[index+1-4];
+    for (int i=0;i<vals.length;i++) {
+      data[i+index]=vals[i];
     }
     return ans;
   }
   public boolean remove(String element) {
     boolean occurs = contains(element);
-    int indexOf = indexOf(element);
-    remove(indexOf);
-    return occurs;
+    if (contains(element)) {
+      int indexOf = indexOf(element);
+      System.out.println(""+indexOf);
+      System.out.println(remove(indexOf));
+      for (int i=0;i<data.length;i++) {
+        System.out.println(""+data[i]);
+      }
+      return true;
+    }
+    return false;
   }
 }
