@@ -118,4 +118,25 @@ public class SuperArray {
       data[i]=vals[index+1-4];
     }
   }
+  public String remove(int index) {
+    String ans = data[index];
+    if (index < 0 || index > size()) {
+      System.out.println("Error: index out of range.");
+      return null;
+    }
+    vals = new String[data.length-index];
+    for (int i=index;i<index;i++){
+      vals[i-index]=data[i];
+    }
+    for (int i=index;i<vals.length;i++) {
+      data[i]=vals[index+1-4];
+    }
+    return ans;
+  }
+  public boolean remove(String element) {
+    boolean occurs = contains(element);
+    int indexOf = indexOf(element);
+    remove(indexOf);
+    return occurs;
+  }
 }
