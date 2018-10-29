@@ -137,11 +137,7 @@ public class SuperArray {
   public boolean remove(String element) {
     if (contains(element)) {
       int indexOf = indexOf(element);
-      System.out.println(""+indexOf);
       System.out.println(remove(indexOf));
-      for (int i=0;i<data.length;i++) {
-        System.out.println(""+data[i]);
-      }
       return true;
     }
     return false;
