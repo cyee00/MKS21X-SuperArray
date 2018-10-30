@@ -146,12 +146,6 @@ public class SuperArray {
     if (contains(element)) {
       int indexOf = indexOf(element);
       System.out.println(remove(indexOf));
-<<<<<<< HEAD
-=======
-      /*for (int i=0;i<data.length;i++) {
-        System.out.println(""+data[i]);
-      }*/
->>>>>>> 3d4756a04c055642f795d724d0b9f0af00461c30
       return true;
     }
     return false;
