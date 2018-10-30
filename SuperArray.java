@@ -7,6 +7,14 @@ public class SuperArray {
     data = new String[10];
     size=0;
   }
+  public SuperArray(int initialCapacity) {
+    if (initialCapacity<0) {
+      throw new IllegalArgumentException();
+    } else {
+      data = new String[initialCapacity];
+      size = 0;
+    }
+  }
   public void clear() {
     data = new String[10];
     size = 0;
