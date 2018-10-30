@@ -89,7 +89,7 @@ public class Driver{
 		System.out.println("-Should print []-");
 		System.out.println(a);
 
-/*
+
     //testing resize()
     SuperArray b = new SuperArray();
     System.out.println(b.toStringDebug());
@@ -157,9 +157,9 @@ public class Driver{
     System.out.println(b);
     System.out.println(b.indexOf("five"));
     System.out.println(b.lastIndexOf("five"));
-    //System.out.println(b.remove(9));
-    //System.out.println(b);
-    System.out.println(b.remove("two"));
+    System.out.println(b.remove(1));
     System.out.println(b);
+    //System.out.println(b.remove("two"));
+    //System.out.println(b);
 	}
 }
